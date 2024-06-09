@@ -17,6 +17,10 @@ This will install the necessary packages for the project.
 The test cases are written in the feature files in the Features folder.
 The test cases are written in Gherkin language and are easy to read and understand.
 
+## Assumptions
+Test can be ran in any order, I have added clean up steps to the addToCart feature.
+BDD is simple, this separates the business language from the implementation.
+
 ## Page Object Model
 The project uses the Page Object Model design pattern.
 The pages are defined in the PageObjects folder.
