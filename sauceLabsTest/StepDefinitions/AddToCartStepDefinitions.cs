@@ -5,16 +5,16 @@ namespace sauceDemoTest.StepDefinitions
     [Binding]
     public class addToCartStepDefinitions
     {
-        private readonly BasePageObject _loginPageObject;
         private readonly InventoryPageObject _productPageObject;
+        private readonly BasePageObject _loginPageObject;
 
-        public addToCartStepDefinitions(BasePageObject loginPageObject, InventoryPageObject productPageObject)
+        public addToCartStepDefinitions(InventoryPageObject productPageObject, BasePageObject loginPageObject)
         {
-            _loginPageObject = loginPageObject;
             _productPageObject = productPageObject;
+            _loginPageObject = loginPageObject;
         }
 
-
+        [Given(@"I add (.*) to the cart")]
         [When(@"I add (.*) to the cart")]
         public void WhenIAddItemToTheCart(String item)
         {
@@ -29,5 +29,12 @@ namespace sauceDemoTest.StepDefinitions
             _productPageObject.confirmItemCanBeRemoved(item);
         }
 
+        // After the scenario, the cart is reset
+        [AfterScenario("cart")]
+        public void AfterFeature()
+        {
+            _loginPageObject.clickSelectSideBar();
+            _loginPageObject.resetAppState();
+        }
     }
 }

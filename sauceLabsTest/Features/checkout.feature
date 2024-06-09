@@ -7,7 +7,8 @@ Background:
 
 @tag1
 Scenario: User can checkout
-	Given I proceed to the checkout
+	Given I add sauce-labs-backpack to the cart
+	And I proceed to the checkout
 	And I enter my details
 	When I finish the checkout
 	Then the order should be complete
