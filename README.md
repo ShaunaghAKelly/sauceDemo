@@ -34,6 +34,7 @@ The test results are displayed in the Test Explorer.
 
 ## Living Documentation
 The living documentation is generated using Specflow+LivingDoc.
+A copy has been generated and is available in the root folder of the project.
 
 ### Installation
 Install livingdoc using the following command:
@@ -44,4 +45,20 @@ To generate the living documentation, specify the test assembly and the output f
 For example:
 ```livingdoc test-assembly C:\repos\sauceDemoAutomation\sauceLabsTest\bin\Debug\net6.0\sauceDemoTest.dll -t C:\repos\sauceDemoAutomation\sauceLabsTest\bin\Debug\net6.0\TestExecution.json```
 
+## Coverage
+This project covers 
+- The login functionality of the website https://www.saucedemo.com/.
+- Products are displayed after successful login.
+- The user can add products to the cart.
+- The user can checkout.
+- The user can logout.
+
+### Future Enhancements
+Add more test cases to cover more functionality of the website.
+- Such as adding more products to the cart, removing products from the cart, etc.
+- Add more scenarios to cover different test cases.
+- Add more selectors to the page objects.
+
+### Author
+S Kelly 2024
 
